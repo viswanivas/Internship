@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand" routerLink="/">Mobile Shop</a>
+
+    <!-- Toggler for smaller screens -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products" routerLinkActive="active">Products</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li *ngIf="username"><span class="dropdown-item-text">Username: {{ username }}</span></li>
+            <li *ngIf="email"><span class="dropdown-item-text">Email: {{ email }}</span></li>
+            <li><a class="dropdown-item" href="#" (click)="logout()">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="plus">
+  <i class="fa-solid fa-square-plus"></i>
+  <p class="update1"><a routerLink="/create-product">NEW</a></p>
+</div>
+
+
+<div>
+<div class="pencil">
+   <i class="fa-solid fa-pen"></i>
+   <p class="pen"><a href="/update" target="_blank">UPDATE</a></p>
+</div>
+</div>

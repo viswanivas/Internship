@@ -1,0 +1,245 @@
+[
+  {
+    "image": "https://m.media-amazon.com/images/I/71goZuIha-L._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Samsung Galaxy S23 Ultra 5G",
+    "description": "12GB RAM 256 Storage 200MP Wow-worthy resolution - Resolution on the Wide-angle Camera has nearly doubled, delivering strikingly clear photos. Zoom and crop your shots",
+    "category": "Smartphones",
+    "subcategory": "",
+    "price": "72,999",
+    "brand": "Samsung"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/71CXhVhpM0L._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Samsung Galaxy S24 Ultra",
+    "description": "12GB RAM Android 14 Snapdragon, Fast Charging Support, Dual SIM, Always On Display, Built-In GPS, Mobile Hotspot Capability",
+    "category": "Smartphones",
+    "subcategory": "",
+    "price": "96,470",
+    "brand": "Samsung"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/81vqHyDCSCL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Samsung Galaxy S21 FE 5G ",
+    "description": "12MP F1.8 Main Camera + 12MP Ultrawide Camera  + 8MP Telephoto 32 MP F2.2 Front Camera,4500 mAh battery with Super Fast Charging & Fast Wireless Charging.",
+    "category": "Smartphones",
+    "subcategory": "",
+    "price": "31,999",
+    "brand": "Samsung"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/81dl4dQY3BL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Motorola G45 5G",
+    "description": "Brilliant Blue, 8GB RAM, 128GB Storage 8 GB RAM | 128 GB ROM | Expandable Upto 2 TB",
+    "category": "Smartphones",
+    "subcategory": "",
+    "price": "12,430",
+    "brand": "Motorola"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/71XZP2Hm+5L._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Motorola Edge 50 Fusion 5G",
+    "description": "Marshmallow Blue, 12GB RAM, 256GB Storage 12 GB RAM | 256 GB ROM",
+    "category": "Smartphones",
+    "subcategory": "",
+    "price": "24,999",
+    "brand": "Motorola"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/71ynZLgkkBL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Motorola G64 5G",
+    "description": "Ice Lilac, 12GB RAM, 256GB Storage) Expandable Upto 2TB 24GB RAM with RAM Boost 50MP (OIS) + 8MP | 16MP Front Camera MediaTek Dimensity 7025                    Processor 6000 mAh Battery",
+    "category": "Smartphones",
+    "subcategory": "",
+    "price": "17,099",
+    "brand": "Motorola"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/71zoUhd6fXL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Moto G85 5G 8GB 128GB",
+    "description": "Olive Green, New 16.94 cm (6.67 inch) Full HD+ Display 50MP + 8MP | 32MP Front Camera 5000 mAh Battery Snapdragon 6s Gen 3 Processor",
+    "category": "Smartphones",
+    "subcategory": "",
+    "price": "18,789",
+    "brand": "Motorola"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/51hcDrqwveL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Motorola e40",
+    "description": "Carbon Gray, 4GB RAM 64GB Storage 5000 mAh Battery; UNISOC T700 Processor Form Factor: Smartphone; Human Interface Input: touch Screen",
+    "category": "Smartphones",
+    "subcategory": "",
+    "price": "6,999",
+    "brand": "Motorola"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/71ALJrxmmDL._AC_UL480_FMwebp_QL65_.jpg",
+    "name": "HP 15 Intel Core i5 13th Gen",
+    "description": "16GB Ram/512GB SSD Windows 11/Ms Office/Backlit Kb/15.6 (39.6Cm)/Silver/1.59Kg,108,Intel Iris Xe graphics0p FHD camera ",
+    "category": "Laptops",
+    "subcategory": "",
+    "price": "54,990",
+    "brand": "HP"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/61zrT6-jnxL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "HP 15 Ryzen Core i5 13th Gen",
+    "description": "8GB Ram/512GB SSD Windows 11/Ms Office/Backlit Kb/15.6 (39.6Cm)/Silver/1.59Kg,108,Intel Iris Xe graphics0p FHD camera ",
+    "category": "Laptops",
+    "subcategory": "",
+    "price": "34,990",
+    "brand": "HP"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/71HCKEvYNzL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Dell XPS 9730 Laptop,i7",
+    "description": "Processor/32GB DDR5/1TB SSD/NVIDIA RTX 4060 8GB GDDR6/17.0 (43.18cm) UHD+ AR Touch 500 nits/Backlit KB + FPR/Win 11 + MSO'21 + 15 Month, McAfee/Silver/2.44kg",
+    "category": "Laptops",
+    "subcategory": "",
+    "price": "3,03,990",
+    "brand": "Dell"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/51QGlg5iRdL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Dell Inspiron 12th Gen",
+    "description": "RAM & Storage: 8GB, 8Gx1, DDR4, 2666MHz Ach & 512GB SSD",
+    "category": "Laptops",
+    "subcategory": "",
+    "price": "52,990",
+    "brand": "Dell"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/81mgUtc9iKL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Lenovo IdeaPad i5 12th Gen",
+    "description": "16GB RAM LPDDR5-4800 | 512 GB SSD Camera FHD 1080p with Privacy Shutter",
+    "category": "Laptops",
+    "subcategory": "",
+    "price": "53,560",
+    "brand": "Lenovo"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/51e4y8CsApL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Lenovo Yoga i9",
+    "description": "32GB/1TB Integrated Li-Polymer 70Wh battery, supports Rapid Charge Express",
+    "category": "Laptops",
+    "subcategory": "",
+    "price": "1,47,990",
+    "brand": "Lenovo"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/71F9tcSfAOL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "ASUS Vivo book 16 i9",
+    "description": "16GB/512GB SSD Integrated Intel Iris Xᵉ Graphics 42WHrs Battery Capacity Up to 6 hours Battery life",
+    "category": "Laptops",
+    "subcategory": "",
+    "price": "94,990",
+    "brand": "Asus"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/715A8CJImML._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Redmi Pad",
+    "description": "5MP Front Camera with Focus Frame | 8MP Rear Camera | Metal Unibody Design 6GB/128 GB",
+    "category": "Tablet",
+    "subcategory": "",
+    "price": "13,499",
+    "brand": "Redmi"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/61uA2UVnYWL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Apple iPad  ",
+    "description": "12MP front/12MP Back Camera iPadOS + APPS",
+    "category": "Tablet",
+    "subcategory": "",
+    "price": "33,490",
+    "brand": "Apple"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/6104lCOYMJL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "HONOR Pad X8A",
+    "description": "8300mAh large battery helps you to be connected on-the-go 128 GB ROM Expandable Up-to 1TB(micro sd card)",
+    "category": "Tablet",
+    "subcategory": "",
+    "price": "11,999",
+    "brand": "Honor"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/51oj5gE7P+L._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Oneplus pad go",
+    "description": "8GB; Battery Capacity: 8000 mAH; Compatible Devices: Headphone; Memory Storage Capacity: 128GB; Model: ?Opd2305",
+    "category": "Tablet",
+    "subcategory": "",
+    "price": "19,999",
+    "brand": "Oneplus"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/71Iit7U1S+L._AC_UL480_FMwebp_QL65_.jpg",
+    "name": "boat Lunar",
+    "description": "Check the time, navigation routes, activity records, and more on the 1.39” (3.53 cm) TFT display. Designed with 240x240p resolution for high clarity, this watch makes it easy to view details round-the-clock.",
+    "category": "Wearables",
+    "subcategory": "smartwatches",
+    "price": "1,499",
+    "brand": "boat"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/61GdCtUjrLL._AC_UL480_FMwebp_QL65_.jpg",
+    "name": "Noise Plus",
+    "description": "1.85 Display, Bluetooth Calling Smart Watch, 10 Days Battery, 550 NITS Brightness, Smart DND, 100 Sports Modes, Smartwatch for Men and Women",
+    "category": "Wearables",
+    "subcategory": "smartwatches",
+    "price": "1,299",
+    "brand": "Noise"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/61y2VVWcGBL._AC_UL480_FMwebp_QL65_.jpg",
+    "name": "Firebolt Phoneix",
+    "description": "Bluetooth Calling 1.3,120+ Sports Modes, 240 * 240 PX High Res with SpO2, Heart Rate Monitoring & IP67 Rating (Black)",
+    "category": "Wearables",
+    "subcategory": "smartwatches",
+    "price": "1,599",
+    "brand": "Firebolt"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/71bChOpLuNL._AC_UL480_FMwebp_QL65_.jpg",
+    "name": "Redmi 5 Lite",
+    "description": "Vibrant 1.96 inch Large Display with 600 nits peak brightness Enhanced Five-System GPS",
+    "category": "Wearables",
+    "subcategory": "smartwatches",
+    "price": "3,400",
+    "brand": "Redmi"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/51oZHMpbmxL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "MI Xiaomi 22.5W Fast Charger with USB-C Cable",
+    "description": " Perfect for all Xiaomi, Redmi, and POCO smartphones including Redmi Note series, Mi series, POCO F/X series, and other USB-C devices",
+    "category": "Accessories",
+    "subcategory": "charger",
+    "price": "629",
+    "brand": "MI"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/51sPyZDiRwL._AC_UY327_FMwebp_QL65_.jpg",
+    "name": "Apple 20w",
+    "description": "Type C Adapter for iPhone 16/16 Plus/16 Pro/16 Pro Max, iPhone 15/15 Plus/15 Pro/15 Pro Max, iPhone 14/13/12/11 Series with PD 3.0 USB-C 20 Watt Fast,Charging Adaptor BIS Certified ",
+    "category": "Accessories",
+    "subcategory": "charger",
+    "price": "598",
+    "brand": "Apple"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/61kFL7ywsZS._AC_UL480_FMwebp_QL65_.jpg",
+    "name": "JBL Tune 150",
+    "description": "Ear Wireless Headphones with Mic,up to 40 Hours Playtime,Pure Bass, Quick Charging, Dual Pairing,Bluetooth 5.0 & Voice Assistant Support for Mobile Phones",
+    "category": "Accessories",
+    "subcategory": "Headphones",
+    "price": " 2,799",
+    "brand": "Jbl "
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/61hvte+zmVL._AC_UL480_FMwebp_QL65_.jpg",
+    "name": "Spigen Sillicon",
+    "description": "Spigen Genuine Case Compatible with iPhone 14 Plus Magnet integrated shock absorption case Lightweight slim profile with premium matte finish coating",
+    "category": "Accessories",
+    "subcategory": "case",
+    "price": " 1,954",
+    "brand": "Spigen"
+  }
+]

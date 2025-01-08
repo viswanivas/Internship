@@ -1,0 +1,489 @@
+ /* .category-container {
+    margin-top: 0px;
+  }
+  
+  .category-title {
+    padding-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .col-md-4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+  }
+  
+  .card {
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 8px;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    justify-content: center;
+    object-fit: contain;
+    background-color: white;
+    align-items: center;
+    height: 170px;
+  }
+  
+  .card-img-top:hover {
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    cursor: pointer;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    margin-bottom: 0.5rem;
+  }
+  
+  .container-fluid {
+    background-color: rgb(195, 210, 205);
+    height: 100%;
+    padding-left: 450px;
+    width: 100%;
+  }
+  .fa-eye{
+    float: right;
+    margin-left: 220px;
+  }
+
+  
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal.show {
+    display: flex;
+    background-color: white;
+    min-height: 350px;
+  }
+  
+  .modal-dialog {
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .modal-content {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-header .btn-close {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #000;
+  }
+  
+  .modal-body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .modal-body img {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 20px;
+  }
+  
+  .modal-body .col-md-6 {
+    flex: 1;
+  } */
+
+  /* General Reset for Responsiveness */
+
+/* Category Container */
+
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 20px; 
+}
+
+/* Row Layout */
+.row {
+  /* display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center; 
+  margin-left: 0; */
+
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Aligns cards to start from the left */
+  margin-left: 20px; 
+}
+
+/* Columns for Cards */
+.col-md-4 {
+  /* display: flex;
+  justify-content: center;
+  margin-bottom: 20px;  */
+
+  display: flex;
+  justify-content: center;
+  flex: 1 1 calc(25%); /* Three cards per row, accounting for spacing */
+  max-width: calc(25%); /* Ensures consistent width */
+  margin-bottom: 15px; /* Adjusted spacing between rows */
+}
+
+/* Card Styling */
+.card {
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px; /* Limit the maximum width for consistency */
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  height: 95%;
+}
+
+/* Card Image */
+.card-img-top {
+  width: 100%;
+  justify-content: center;
+  object-fit: contain;
+  background-color: white;
+  align-items: center;
+  height: 160px;
+}
+
+/* Hover Effects */
+.card-img-top:hover {
+  cursor: pointer;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+/* Card Body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  margin-bottom: 0.3rem;
+}
+
+/* Container Fluid */
+.container-fluid {
+  background-color: rgb(195, 210, 205);
+  /* height: 100%; */
+   /* Adjust padding for responsiveness */
+  width: 100%;
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+}
+
+/* Icon Positioning */
+.fa-eye {
+  float: right;
+  margin-left: 220px;
+}
+
+.bi-cart{
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(249, 246, 246);
+  width: 26px;
+  color: white;
+  padding-left: 2px;
+  border-radius: 2px;
+  align-items: center;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show {
+  display: flex;
+  background-color: white;
+  min-height: 350px;
+}
+
+.modal-dialog {
+  max-width: 800px;
+  width: 100%;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header .btn-close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-body img {
+  width: 100%;
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+.modal-body .col-md-6 {
+  flex: 1;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .container-fluid {
+    height: 100%;
+    padding-left: 20px; /* Reduce excessive padding on large screens */
+  }
+
+  .col-md-4 {
+    flex: 1 1 33%; /* Three cards per row */
+    max-width: 33%; /* Ensure consistent width */
+  }
+}
+
+@media (max-width: 992px) {
+  .col-md-4 {
+    flex: 1 1 50%; /* Two cards per row */
+    max-width: 50%;
+  }
+
+  .fa-eye {
+    margin-left: 0; /* Adjust icon position for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .category-title {
+    font-size: 1.25rem; /* Adjust font size */
+  }
+
+  .col-md-4 {
+    flex: 1 1 100%; /* Single card per row */
+    max-width: 100%;
+  }
+
+  .card {
+    width: 100%; /* Full width for cards */
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+
+  .card-title {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .card-text {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+
+  .fa-eye {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+}
+
+/* Cart Icon in Cards */
+.bi-cart-plus {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #050505;
+}
+
+.bi-cart-plus:hover {
+  color: #0056b3;
+}
+
+/* For the cart items */
+.cart-item img {
+  width: 100%;
+  height: auto;
+}
+
+.cart-icon {
+  color: #000;
+  margin-top: 13px;
+  font-size: large;
+}
+
+.cart-icon .badge {
+  font-size: 0.8rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Responsive styles for small devices */
+@media (max-width: 576px) {
+  .modal-dialog {
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  .modal-content {
+    padding: 10px;
+  }
+
+  .cart-item .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-item img {
+    max-width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .cart-item .col-md-7, .cart-item .col-md-2 {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Responsive styles for medium devices */
+@media (min-width: 577px) and (max-width: 768px) {
+  .modal-dialog {
+    max-width: 90%;
+  }
+
+  .cart-item img {
+    max-width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .cart-item .col-md-7, .cart-item .col-md-2 {
+    text-align: center;
+  }
+}
+
+/* Responsive styles for large devices */
+@media (min-width: 769px) and (max-width: 992px) {
+  .modal-dialog {
+    max-width: 80%;
+  }
+
+  .cart-item img {
+    max-width: 70%;
+    margin-bottom: 10px;
+  }
+
+  .cart-item .col-md-7 {
+    text-align: left;
+  }
+
+  .cart-item .col-md-2 {
+    text-align: right;
+  }
+}
+
+/* Responsive styles for extra large devices */
+@media (min-width: 993px) {
+  .modal-dialog {
+    max-width: 70%;
+  }
+
+  .cart-item img {
+    max-width: 60%;
+    margin-bottom: 10px;
+  }
+
+  .cart-item .col-md-7 {
+    text-align: left;
+  }
+
+  .cart-item .col-md-2 {
+    text-align: right;
+  }
+}
+.modal-content { max-height: 80vh; overflow-y: auto; overflow-x: hidden; display: flex; flex-direction: column; }

@@ -1,0 +1,86 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    margin-left: 5px;
+}
+
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Align links to the right */
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end; /* Ensure alignment to the right */
+    flex-grow: 1;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-right: 5px; /* Adds spacing from the right edge */
+}
+
+/* Adjust dropdown menu style */
+.dropdown-menu {
+    background-color: #343a40; 
+    border: none; 
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #495057;
+}
+
+.dropdown-item-text {
+    color: white;
+}
+
+/* Icon styling */
+.bi-person-circle {
+    font-size: 18px;
+    color: #f9f8f8;
+}
+
+/* For responsive design */
+@media (max-width: 600px) {
+    .navbar-collapse {
+        justify-content: space-between;
+    }
+
+    .update-container {
+        justify-content: center;
+    }
+}
+
+
+.fa-square-plus
+{
+    font-size: 50px;
+    margin-top: 15%;
+    margin-left: 35%;
+}
+.update1{
+    margin-left: 35%;cursor: pointer;
+}
+.fa-pen{
+    font-size: 50px;float: right;
+    margin-right: 30%;
+    margin-top: -6%;
+}
+.pen{
+    float: right;
+    margin-top: -2.5%;
+    margin-right: 30%;
+}

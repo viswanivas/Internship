@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="sign-up">
+      <h1 class="heading">Hello,friend!</h1>
+
+      <div class="text">
+        <img src="https://i.postimg.cc/1zgS8WTF/user.png" alt="icon" height="20">
+        <input type="text" formControlName="name" placeholder="Username" required>
+      </div>
+
+      <div class="text">
+        <img src="https://i.postimg.cc/DZBPRgvC/email.png" alt="icon" height="12">
+        <input type="email" formControlName="email" placeholder="Email" required>
+      </div>
+
+      <div class="text">
+        <img src="https://i.postimg.cc/Nj5SDK4q/password.png" alt="icon" height="20">
+        <input type="password" formControlName="password" placeholder="Password" required>
+      </div>
+
+      <div class="text">
+        <img src="https://i.postimg.cc/Nj5SDK4q/password.png" alt="icon" height="20">
+        <input type="password" formControlName="repeatPassword" placeholder="Repeat Password" required>
+      </div>
+
+      <div class="text dropdown">
+        <img src="https://i.postimg.cc/1zgS8WTF/user.png" alt="icon" height="20">
+        <select formControlName="role" required>
+          <option value="" disabled selected>Select Role</option>
+          <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+        </select>
+      </div>
+      
+      <div class="terms">
+        <input type="checkbox" formControlName="terms" required>
+        <p class="conditions">I read and agree to <a routerLink="#">terms & conditions</a></p>
+      </div>
+
+      <button type="submit">CREATE ACCOUNT</button>
+      <p class="conditions">Already have an account?<a routerLink="/login">Login</a></p>
+    </div>
+  </form>
+
+  <div class="text-container">
+    <h1>Glad to see you!</h1>
+    <p>Welcome, please fill in the blanks for sign up</p>
+  </div>
+</div>
+
+<app-footer></app-footer>

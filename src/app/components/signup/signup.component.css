@@ -1,0 +1,265 @@
+/* General Styles */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+    margin: 50px auto;
+    box-shadow: 2px 2px 30px rgba(66, 57, 238, .2);
+    border-radius: 20px;
+    background-image: url('https://i.postimg.cc/pdL2vfK9/bg.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10px;
+}
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures the image and dropdown are spaced apart */
+    width: 100%; /* Adjust as per your container size */
+  }
+  
+  .icon {
+    margin-right: 50px; /* Adds spacing between the image and the dropdown */
+  }
+  
+.sign-up {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p.conditions {
+    margin: 10px;
+}
+
+.heading {
+    font-family: calibri;
+    color: rgba(30, 30, 30, 1);
+}
+
+.text {
+    width: 350px;
+    height: 50px;
+    box-shadow: 2px 6px 18px rgba(66, 57, 238, .3);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.text input {
+    height: 40px;
+    width: 80%;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.text img {
+    margin-left: 20px;
+}
+
+.conditions {
+    color: #070707;
+    font-size: 14px;
+}
+
+.conditions a {
+    color: #7D22E3;
+    font-weight: 500;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;  /* Adjust for consistent width */
+    margin-top: 10px;
+}
+
+.terms input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(-30deg, #3B02ED, #8E2AE0 55%);
+    box-shadow: 2px 6px 16px rgba(66, 57, 238, .3);
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+.text-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container p {
+    width: 70%;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.text-container h1 {
+    color: #2D2C2C;
+    line-height: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .text-container {
+        display: none;
+    }
+    .container {
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 85%;
+    }
+
+    .terms {
+        width: 100%;
+        flex-direction: column;  /* Stack checkbox and text on mobile */
+        align-items: flex-start;
+    }
+
+    .terms input[type="checkbox"] {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .text {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .heading {
+        text-align: center;
+    }
+
+    .conditions {
+        text-align: center;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    .text {
+        width: 280px;
+    }
+
+    .terms {
+        flex-direction: column; /* Stack checkbox and text on smaller screens */
+        align-items: flex-start;
+    }
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 14px;
+    color: rgba(30, 30, 30, 1);
+    margin: 10px 0;
+}
+
+p .sign-up {
+    color: #7D22E3;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+p .sign-up:hover {
+    text-decoration: underline;
+}
+
+/* Role Dropdown Styling */
+.text select {
+    height: 40px;
+    width: 80%;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    margin: 5px;
+    background-color: transparent;
+    appearance: none; /* Removes default dropdown arrow styling */
+    cursor: pointer;
+  }
+  
+  .text select:focus {
+    outline: none; /* Remove focus border */
+  }
+  
+  .text select::-ms-expand {
+    display: none; /* Hides default arrow for IE */
+  }
+  
+  
+  /* Arrow icon only for dropdown */
+.text.dropdown {
+    position: relative;
+  }
+  
+  .text.dropdown::after {
+    content: '▼'; /* Dropdown arrow */
+    font-size: 12px;
+    color: rgba(30, 30, 30, 0.5);
+    position: absolute;
+    right: 25px;
+    pointer-events: none;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .text select {
+      width: 75%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .text select {
+      width: 70%;
+    }
+  }
+  

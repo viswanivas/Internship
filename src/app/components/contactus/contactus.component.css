@@ -1,0 +1,297 @@
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* General Styles */
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* Container Styles */
+.container {
+  height: 500px;
+  width: 100%;
+  padding-top: 5%;
+}
+
+/* Text and Typography */
+h1 {
+  padding-left: 7%;
+  font-size: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  overflow: hidden;
+  
+}
+
+.row input{
+    width: 100%;
+}
+/* Section Title */
+.section-title {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 35px;
+}
+
+/* Padding for Sections */
+.sec-pad {
+  padding: 20px 0;
+}
+
+/* Contact Section */
+.contact-sec {
+  align-items: center;
+  display: flex;
+  background-color: rgb(153, 184, 242);
+  min-height: 639px;
+  padding: 40px 0;
+}
+
+/* Contact Details */
+.contact-sec .contact-ul li,
+.contact-ul b {
+  font-size: 20px;
+  margin: 10px 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  word-wrap: break-word;
+  color: #000;
+}
+
+.contact-sec .contact-ul i {
+  font-size: 18px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.contact-detail a {
+  color: #fcfbfb;
+  text-decoration: none;
+}
+
+.contact-sec .contact-ul li b:hover {
+  color: #f93;
+}
+
+/* Icon Colors */
+.contact-sec .contact-ul li .fa-location-dot {
+  color: #f44337;
+  border: 2px solid #f4433790;
+}
+
+.contact-sec .contact-ul li .fa-phone {
+  color: #00b055;
+  border: 2px solid #00b05590;
+}
+
+.contact-sec .contact-ul li .fa-envelope {
+  color: #ff6347;
+  border: 2px solid #ff634790;
+}
+
+/* Contact Social Icons */
+.contact-detail span {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-detail span a {
+  font-size: 20px;
+  padding: 6px 12px;
+  color: #f9f6f6;
+  border-radius: 50%;
+  margin: 0px 5px;
+}
+
+/* Social Media Icons Hover Effects */
+.contact-detail span .fb {
+  color: #3b5998;
+  border: 3px solid #3b5998;
+}
+
+.contact-detail span .fb:hover {
+  color: #fff;
+  background-color: #3b5998;
+}
+
+.contact-detail span .insta {
+  color: #833ab4;
+  border: 3px solid #833ab4;
+}
+
+.contact-detail span .insta:hover {
+  color: #fff;
+  background-color: #833ab4;
+}
+
+.contact-detail span .twitter {
+  color: #00acee;
+  border: 3px solid #00acee;
+}
+
+.contact-detail span .twitter:hover {
+  color: #fff;
+  background-color: #00acee;
+}
+
+/* Contact Form */
+form.contFrm {
+  max-width: 396px;
+  margin: auto;
+}
+
+.inptFld {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  margin: 0 0 15px; /* Add margin to separate the input fields */
+  border-radius: 8px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #000;
+}
+
+.inptFld:focus {
+  outline-offset: -4px;
+  outline: 1px solid #f93;
+}
+
+.contFrm textarea {
+  height: 75px;
+  padding-top: 5px;
+}
+
+.inptBtn {
+  height: 50px;
+  border: 0;
+  background: #00b055;
+  font-size: 14px;
+  color: #fff;
+  margin: auto;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* Footer Styles */
+.foot {
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 9px;
+  position: relative;
+  bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .sec-pad {
+    padding: 20px 0;
+  }
+
+  .contact-sec .contact-ul li,
+  .contact-ul b {
+    font-size: 18px;
+  }
+
+  .contact-sec .contact-ul i {
+    font-size: 14px;
+    padding: 6px;
+    margin-right: 6px;
+  }
+
+  .inptFld {
+    height: 40px;
+    margin: 0 0 10px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-detail span {
+    width: auto;
+  }
+
+  .contact-detail span a {
+    font-size: 18px;
+    padding: 5px 10px;
+    color: #000;
+    border-radius: 50%;
+    margin: 0px 5px 20px;
+  }
+
+  .inptFld {
+    height: 36px;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  .contact-sec {
+    border-radius: 10% 10% 0% 0% / 5% 5% 0% 0%;
+  }
+
+  .contact-sec .contact-ul i {
+    border: none;
+  }
+
+  .inptFld {
+    height: 32px;
+    margin: 0 0 8px;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  .inptBtn {
+    height: 40px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-sec .contact-ul li,
+  .contact-ul b {
+    font-size: 16px;
+  }
+
+  .inptFld {
+    height: 30px;
+    padding: 0 8px;
+    font-size: 12px;
+  }
+
+  .inptBtn {
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
+.copy {
+  text-align: center;
+  margin-left: 200px;
+}
+
+.copy p {
+  padding-top: 150px;
+  color: rgb(30, 25, 25);
+}

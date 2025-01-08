@@ -1,0 +1,127 @@
+<!-- <app-navbar (searchEvent)="searchProducts($event)"></app-navbar> -->
+ <app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <nav id="sidebar">
+          <ul class="list-group">
+            <li class="list-group-item" (click)="resetFilters()">All</li>
+            <!-- SmartPhones -->
+            <li class="list-group-item" (click)="selectCategory('SmartPhones')" (click)="toggleCategory('SmartPhones')">
+              SmartPhones
+              <i class="fa" [ngClass]="{'fa-caret-down': openCategory === 'SmartPhones', 'fa-caret-right': openCategory !== 'SmartPhones'}"></i>
+            </li>
+            <ul *ngIf="openCategory === 'SmartPhones'" class="list-group subcategory-list">
+              <li class="list-group-item" *ngFor="let brand of availableBrands['SmartPhones']" (click)="selectSubcategory('SmartPhones', brand)">{{ brand }}</li>
+            </ul>
+  
+            <!-- Tablets -->
+            <li class="list-group-item" (click)="selectCategory('Tablets')" (click)="toggleCategory('Tablets')">
+              Tablets
+              <i class="fa" [ngClass]="{'fa-caret-down': openCategory === 'Tablets', 'fa-caret-right': openCategory !== 'Tablets'}"></i>
+            </li>
+            <ul *ngIf="openCategory === 'Tablets'" class="list-group subcategory-list">
+              <li class="list-group-item" *ngFor="let brand of availableBrands['Tablets']" (click)="selectSubcategory('Tablets', brand)">{{ brand }}</li>
+            </ul>
+  
+            <!-- Laptops -->
+            <li class="list-group-item" (click)="selectCategory('Laptops')" (click)="toggleCategory('Laptops')">
+              Laptops
+              <i class="fa" [ngClass]="{'fa-caret-down': openCategory === 'Laptops', 'fa-caret-right': openCategory !== 'Laptops'}"></i>
+            </li>
+            <ul *ngIf="openCategory === 'Laptops'" class="list-group subcategory-list">
+              <li class="list-group-item" *ngFor="let brand of availableBrands['Laptops']" (click)="selectSubcategory('Laptops', brand)">{{ brand }}</li>
+            </ul>
+<!-- Accessories -->
+<li class="list-group-item" (click)="selectCategory('Accessories')" (click)="toggleCategory('Accessories')">
+  Accessories
+  <i class="fa" [ngClass]="{'fa-caret-down': openCategory === 'Accessories', 'fa-caret-right': openCategory !== 'Accessories'}"></i>
+</li>
+<ul *ngIf="openCategory === 'Accessories'" class="list-group subcategory-list">
+  <li class="list-group-item" *ngFor="let sub of ['Chargers', 'Mobile Cases', 'Headphones', 'Connectors', 'PowerBanks']"
+      (click)="selectSubcategory('Accessories', sub)">
+    {{ sub }}
+    <i class="fa" [ngClass]="{'fa-caret-down': openSubcategory === sub, 'fa-caret-right': openSubcategory !== sub}"></i>
+  </li>
+</ul> 
+
+<!-- Brands for Accessories -->
+<ul *ngIf="selectedCategory === 'Accessories' && openSubcategory" class="list-group subcategory-list">
+  <li class="list-group-item" *ngFor="let brand of availableBrands['Accessories']" 
+      (click)="filterByBrand(brand)">
+    {{ brand }}
+  </li>
+</ul>
+
+<!-- Wearables -->
+<li class="list-group-item" (click)="selectCategory('Wearables')" (click)="toggleCategory('Wearables')">
+  Wearables
+  <i class="fa" [ngClass]="{'fa-caret-down': openCategory === 'Wearables', 'fa-caret-right': openCategory !== 'Wearables'}"></i>
+</li>
+<ul *ngIf="openCategory === 'Wearables'" class="list-group subcategory-list">
+  <li class="list-group-item" *ngFor="let sub of ['Fitness Bands', 'Smartwatches']"
+      (click)="selectSubcategory('Wearables', sub)">
+    {{ sub }}
+    <i class="fa" [ngClass]="{'fa-caret-down': openSubcategory === sub, 'fa-caret-right': openSubcategory !== sub}"></i>
+  </li>
+</ul>
+
+<!-- Brands for Wearables -->
+<ul *ngIf="selectedCategory === 'Wearables' && openSubcategory" class="list-group subcategory-list">
+  <li class="list-group-item" *ngFor="let brand of availableBrands['Wearables']" 
+      (click)="filterByBrand(brand)">
+    {{ brand }}
+  </li>
+</ul>
+
+
+ </ul>  
+  </nav>
+</div>
+
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-4" *ngFor="let product of filteredProducts">
+            <div class="card mb-3">
+              <img [src]="product.image" class="card-img-top" alt="Product Image">
+              <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text"> {{ product.showFullDescription ? product.description : (product.description | slice:0:100) }}
+                  <span *ngIf="!product.showFullDescription && product.description.length > 100">...</span>
+                  <a href="#" (click)="toggleDescription(product, $event)">{{ product.showFullDescription ? 'Read Less' : 'Read More' }}</a> </p>
+                <p class="card-text"><strong>Category:</strong> {{ product.category }}</p>
+                <p class="card-text"><strong>Price:</strong> {{ product.price }}</p>
+                <i class="fa fa-eye" (click)="viewProductDetails(product)"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+ 
+  <div class="modal" tabindex="-1" [ngClass]="{'show': isModalOpen}" (click)="closeModal($event)">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ selectedProduct?.name }}</h5>
+          <button type="button" class="btn-close" (click)="closeModal()"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img [src]="selectedProduct?.image" class="img-fluid" alt="Product Image">
+            </div>
+            <div class="col-md-6">
+              <p><strong>Price:</strong> {{ selectedProduct?.price }}</p>
+              <p><strong>Description:</strong> {{ selectedProduct?.description }}</p>
+              <p><strong>Category:</strong> {{ selectedProduct?.category }}</p>
+              <p><strong>Brand:</strong> {{ selectedProduct?.brand }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<app-footer></app-footer>

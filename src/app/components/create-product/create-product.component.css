@@ -1,0 +1,134 @@
+/* Main navbar styles */
+.navbar {
+  background-color: #343a40; /* Dark background color */
+}
+
+.navbar-brand {
+  color: white; /* Brand color */
+  font-size: 1.5rem; /* Font size for the brand name */
+  font-weight: bold; /* Bold font */
+}
+
+.navbar-brand:hover {
+  color: #dcdcdc; /* Hover color for the brand */
+}
+
+.navbar-toggler {
+  border: none; /* Remove border */
+  color: #fff; /* Toggle color */
+}
+
+.navbar-toggler-icon {
+  color: #fff; /* Toggle icon color */
+}
+
+/* Form styles */
+.d-flex {
+  margin-left: 20%;
+  width: 50%;
+}
+
+.form-control:focus {
+  border-color: #80bdff; /* Focus border color */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus shadow */
+}
+
+.btn-outline-success {
+  color: #fff; /* Button text color */
+  border-color: #28a745; /* Border color */
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745; /* Hover background color */
+  border-color: #28a745; /* Hover border color */
+}
+
+/* Form container styles */
+.container-form {
+  background-color: #dee9f3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.form-container {
+  background-color: #f6f6f6; /* Light ash color */
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group label {
+  width: 150px;
+  text-align: left;
+}
+
+.form-control {
+  padding: 10px;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center;
+  margin-top: 20px; /* Add some top margin for spacing */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  font-size: 16px;
+  width: 150px; /* Adjusted width of the button */
+  border-radius: 5px;
+  margin-left: 37%;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+
+/* Responsive design */
+@media (max-width: 576px) {
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group label, .form-control {
+    width: 100%;
+  }
+
+  .btn-primary {
+    width: 100%; /* Full width on small devices */
+  }
+
+  .form-control {
+    width: 100%; /* Full width on small devices */
+    margin-bottom: 0.5rem; /* Margin for bottom spacing */
+  }
+
+  .btn-outline-success {
+    width: 100%; /* Full width on small devices */
+  }
+}
+
+h4 {
+  margin-top: 2px;
+  padding-top: 2%;
+  text-align: center;
+}

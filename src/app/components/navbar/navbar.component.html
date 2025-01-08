@@ -1,0 +1,155 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container">
+    <img src="../../../assets/products/shopnow.png" style="width: 50px;margin-left: -45px;margin-right: 8px;">
+    <a class="navbar-brand" routerLink="/">zamzam Electronics</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon" ></span>
+    </button>
+ <!-- Search Form -->
+  <form class="d-flex navbar-center" (submit)="onSearch(searchQuery)" *ngIf="isLoggedIn$ | async">
+   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchQuery" name="searchQuery">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+
+  <div class="dropdown" *ngIf="(isLoggedIn$ | async)"> 
+    <i class="bi bi-funnel-fill" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 1.5rem; cursor: pointer;"></i>
+     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton"> 
+      <li>
+        <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="0-500" id="priceRange1" (change)="onFilterChange($event)">
+       <label class="form-check-label" for="priceRange1"> ₹0 - ₹500 </label> 
+     </div>
+    </li>
+       <li>
+         <div class="form-check">
+       <input class="form-check-input" type="checkbox" value="501-1000" id="priceRange1" (change)="onFilterChange($event)">
+        <label class="form-check-label" for="priceRange1"> ₹501 - ₹1000 </label> 
+      </div>
+     </li>
+      <li> 
+      <div class="form-check"> 
+         <input class="form-check-input" type="checkbox" value="1001-5000" id="priceRange2" (change)="onFilterChange($event)">
+          <label class="form-check-label" for="priceRange2"> ₹1001 - ₹5000 </label>
+         </div>
+         </li> 
+         <li> 
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="5001-10000" id="priceRange3" (change)="onFilterChange($event)">
+          <label class="form-check-label" for="priceRange3"> ₹5001 - 10000 </label>
+         </div> 
+        </li> 
+        <li>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="10001-20000" id="priceRange3" (change)="onFilterChange($event)">
+             <label class="form-check-label" for="priceRange3"> ₹10001 - 20000 </label>
+            </div> 
+        </li>
+        <li>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="20001-30000" id="priceRange3" (change)="onFilterChange($event)">
+             <label class="form-check-label" for="priceRange3"> ₹20001 - 30000 </label>
+            </div> 
+        </li>
+        <li>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="30001-45000" id="priceRange3" (change)="onFilterChange($event)">
+             <label class="form-check-label" for="priceRange3"> ₹30001 - 45000 </label>
+            </div> 
+        </li>
+        <li>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="45001-65000" id="priceRange3" (change)="onFilterChange($event)">
+             <label class="form-check-label" for="priceRange3"> ₹45001 - 65000 </label>
+            </div> 
+        </li>
+        <li>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="65000-above" id="priceRange3" (change)="onFilterChange($event)">
+             <label class="form-check-label" for="priceRange3"> ₹65000 - above </label>
+            </div> 
+        </li>
+      </ul>
+    </div>
+
+
+<!-- Icon to open the sidebar -->
+
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item item" *ngIf="!(isLoggedIn$ | async)">
+          <a class="nav-link " routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products"  routerLinkActive="active">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">ContactUS</a>
+        </li>
+      </ul>
+    </div>
+    
+    
+    <i class="fa-solid fa-list" (click)="toggleSidebar()" 
+       style="color: white; cursor: pointer;font-size: 21px;">
+    </i> 
+  
+     <div class="dropdown">
+    </div>
+    <li class="nav-item dropdown"  *ngIf="isLoggedIn$ | async">
+      <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+        <i class="bi bi-person-circle ms-auto"></i>
+      </a> 
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+       <li *ngIf="username"><span class="dropdown-item-text">{{ username }}</span></li> 
+       <li *ngIf="email"><span class="dropdown-item-text">{{ email }}</span></li> 
+       <li><a class="dropdown-item" href="#" (click)="logout()">Logout</a></li> 
+      </ul>
+  </div>
+
+
+<!-- Sidebar for Categories -->
+<!-- First Sidebar (Categories) -->
+<div class="sidebar" [ngClass]="{'sidebar-open': sidebarOpen, 'sidebar-closed': !sidebarOpen}">
+  <ul>
+    <li *ngFor="let category of categories">
+      <div class="category-item">
+        <!-- Clicking on the category name does not toggle brands -->
+        <span (click)="onCategoryClick(category)">{{ category }}</span>
+        <!-- Click on the down arrow toggles brands -->
+        <i
+          class="fa"
+          [ngClass]="{'fa-chevron-down': selectedCategory === category, 'fa-chevron-right': selectedCategory !== category}"
+          (click)="toggleBrandsForCategory(category)">
+        </i>
+      </div>
+
+      <!-- Display subcategories only if the category is selected -->
+      <ul *ngIf="selectedCategory === category">
+        <li *ngFor="let subcategory of getSubcategories(category)" class="subcategory-item">
+          <span>{{ subcategory }}</span>
+          <i
+            class="fa fa-arrow-right"
+            *ngIf="getBrandsForSubcategory(subcategory).length"
+            (click)="toggleBrands(subcategory)">
+          </i>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- Second Sidebar (Brands) -->
+<div
+  class="sidebar-brands"
+  *ngIf="isBrandSidebarVisible"
+  [ngClass]="{'sidebar-brands-open': isBrandSidebarVisible}">
+  <h6>Brands:</h6>
+  <ul>
+    <li *ngFor="let brand of brands" (click)="onBrandClick(brand)">{{ brand }}</li>
+  </ul>
+</div>
+</nav>

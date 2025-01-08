@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
+    <div class="login">
+      <h1 class="heading">Hello,friend!</h1>
+
+      <div class="text">
+        <img src="https://i.postimg.cc/1zgS8WTF/user.png" alt="icon" height="20">
+        <input type="text" formControlName="userName" placeholder="User Name" required>
+      </div>
+
+      <div class="text">
+        <img src="https://i.postimg.cc/Nj5SDK4q/password.png" alt="icon" height="20">
+        <input type="password" formControlName="password" placeholder="Password" required>
+      </div>
+
+    
+      <button type="submit">Login</button>
+      <p class="conditions">Don't Have Account? <a routerLink="/signup">Sign Up</a> here</p>
+    </div>
+  </form>
+
+  <div class="text-container">
+    <h1>Glad to see you!</h1>
+    <p>Welcome, please fill in the blanks for Login</p>
+  </div>
+</div>
+
+<app-footer></app-footer>

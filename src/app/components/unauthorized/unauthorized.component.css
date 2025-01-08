@@ -1,0 +1,76 @@
+/* Container styling */
+.unauthorized-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  /* Content box */
+  .content {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  /* Heading */
+  .content h1 {
+    font-size: 2.5rem;
+    color: #dc3545; /* Bootstrap danger color */
+    margin-bottom: 20px;
+  }
+  
+  /* Message */
+  .content p {
+    font-size: 1.2rem;
+    color: #6c757d; /* Bootstrap muted text color */
+    margin-bottom: 30px;
+  }
+  
+  /* Actions */
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Button */
+  .content .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  
+  /* Home link */
+  .home-link {
+    text-decoration: none;
+    color: #007bff; /* Bootstrap primary color */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .home-link:hover {
+    color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 576px) {
+    .content h1 {
+      font-size: 2rem;
+    }
+  
+    .content p {
+      font-size: 1rem;
+    }
+  
+    .content .btn,
+    .home-link {
+      font-size: 0.9rem;
+    }
+  }
+  

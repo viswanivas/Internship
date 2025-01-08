@@ -1,0 +1,102 @@
+
+.sec{
+  background-color: rgb(150, 150, 231);
+  height: 100%;
+}
+.card{
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  border: none;
+  overflow: hidden;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.card img {
+  height: 170px; /* Reduced height for better consistency */
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Ensure full-width carousel on larger screens */
+.carousel {
+  width: 100%;
+}
+
+/* Ensure card container is responsive */
+.container {
+  width: 100%;
+  flex-grow: 1;
+  margin-top: -10px;
+}
+h4 {
+  text-align: center;
+  color: #f7f4f4;
+  padding-top: -3px;
+  cursor: pointer;
+}
+h4:hover{
+  color: black;
+}
+.sec {
+  display: flex;
+  height:100%;
+}
+
+/* Responsive behavior */
+@media (min-width: 576px) {
+  .col-sm-12 {
+    flex: 0 0 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-2 {
+    flex: 0 0 20%; /* 5 cards in a row */
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-2 {
+    flex: 0 0 50%; /* 2 cards in a row for medium-sized devices */
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-2 {
+    flex: 0 0 100%; /* 1 card per row on smaller screens */
+  }
+}
+
+.btn-cart {
+  background-color: rgb(241, 241, 69);
+  color: rgb(8, 8, 8);
+  float: right;
+  border-radius: 5px;
+}
+
+.btn-cart:hover {
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  color: #f7f4f4;
+  font-size: 2rem;
+}
+
+/* Medium to large screens */
+@media (min-width: 992px) {
+  .sec {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+

@@ -1,0 +1,151 @@
+<!-- <app-navbar (categorySelected)="onCategorySelected($event)"></app-navbar> -->
+<app-navbar ></app-navbar>
+<div class="container-fluid">
+  <!-- Cart Icon in Navbar -->
+  <div class="d-flex justify-content-end">
+    <div class="cart-icon position-relative" (click)="openCartModal()">
+      <i class="bi bi-cart-fill" style="font-size: 1.5rem; cursor: pointer;"></i>
+      <span *ngIf="cart.length > 0" class="badge bg-danger position-absolute top-0 start-100 translate-middle">
+        {{ cart.length }}
+      </span>
+    </div>
+  </div>
+
+  <!-- If no category is selected, display products grouped by category -->
+  <!-- <div *ngIf="!selectedCategory; else categoryContent"> -->
+    <div *ngIf="showCategories; else searchResults">
+       <div *ngFor="let category of categories">
+      <div class="category-container">
+        <h3 class="category-title">{{ category }}</h3>
+        <div class="row">
+          <div class="col-md-4" *ngFor="let product of categorizedProducts[category]">
+            <div class="card mb-3">
+              <img [src]="product.image" class="card-img-top" alt="Product Image">
+              <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text"> 
+                  {{ product.showFullDescription ? product.description : (product.description | slice:0:100) }}
+                  <span *ngIf="!product.showFullDescription && product.description.length > 100">...</span>
+                  <a href="#" (click)="toggleDescription(product, $event)">{{ product.showFullDescription ? 'Read Less' : 'Read More' }}</a>
+                </p>
+                <p class="card-text"><strong>Category:</strong> {{ product.category }}</p>
+                <p class="card-text"><strong>Price:{{ product.price }}</strong> </p>
+                <i class="fa fa-eye" (click)="viewProductDetails(product)"></i>
+                <!-- Replace Cart Button with Cart Icon -->
+                <i class="bi bi-cart-plus" (click)="addToCart(product)"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- If a category is selected, display products for that category -->
+  <ng-template #categoryContent>
+    <div class="category-container">
+      <h3 class="category-title">{{ selectedCategory }}</h3> <!-- Display selected category -->
+      <div class="row">
+        <div class="col-md-4" *ngFor="let product of getFilteredProducts()">
+          <div class="card mb-3">
+            <img [src]="product.image" class="card-img-top" alt="Product Image">
+            <div class="card-body">
+              <h5 class="card-title">{{ product.name }}</h5>
+              <p class="card-text">
+                {{ product.showFullDescription ? product.description : (product.description | slice:0:70) }}
+                <span *ngIf="!product.showFullDescription && product.description.length > 100">...</span>
+                <a href="#" (click)="toggleDescription(product, $event)">{{ product.showFullDescription ? 'Read Less' : 'Read More' }}</a>
+              </p>
+              <p class="card-text"><strong>Category:</strong> {{ product.category }}</p>
+              <p class="card-text"><strong>Price:</strong> {{ product.price }}</p>
+              <i class="fa fa-eye" (click)="viewProductDetails(product)"></i>
+              <!-- Replace Cart Button with Cart Icon -->
+              <i class="bi bi-cart-plus" (click)="addToCart(product)"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+
+<ng-template #searchResults>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let product of filteredProducts">
+      <div class="card mb-3">
+        <img [src]="product.image" class="card-img-top" alt="Product Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text"><strong>Price:</strong> {{ product.price }}</p>
+          <i class="fa fa-eye" (click)="viewProductDetails(product)"></i>
+          <i class="bi bi-cart-plus" (click)="addToCart(product)"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+  
+  <div class="modal" tabindex="-1" [ngClass]="{'show': isModalOpen}" (click)="closeModal($event)">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ selectedProduct?.name }}</h5>
+          <button type="button" class="btn-close" (click)="closeModal()"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img [src]="selectedProduct?.image" class="img-fluid" alt="Product Image">
+            </div>
+            <div class="col-md-6">
+              <p><strong>Price:</strong> {{ selectedProduct?.price }}</p>
+              <p><strong>Description:</strong> {{ selectedProduct?.description }}</p>
+              <p><strong>Category:</strong> {{ selectedProduct?.category }}</p>
+              <p><strong>Brand:</strong> {{ selectedProduct?.brand }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Cart Modal -->
+  <div class="modal" tabindex="-1" [ngClass]="{'show': isCartModalOpen}" (click)="closeCartModal()">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cart</h5>
+          <button type="button" class="btn-close" (click)="closeCartModal()"></button>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="cart.length > 0; else emptyCart">
+            <div *ngFor="let product of cart" class="cart-item">
+              <div class="row">
+                <div class="col-md-3">
+                  <img [src]="product.image" class="img-fluid" alt="Product Image">
+                </div>
+                <div class="col-md-7">
+                  <h5>{{ product.name }}</h5>
+                  <p><strong>Price:</strong> {{ product.price }}</p>
+                  <p><strong>Description:</strong>{{product.description}}</p>
+                </div>
+                <div class="col-md-2 text-end">
+                  <button class="btn btn-danger btn-sm" (click)="removeFromCart(product)">Remove</button>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+          <ng-template #emptyCart>
+            <p>Your cart is empty.</p>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<app-footer></app-footer>

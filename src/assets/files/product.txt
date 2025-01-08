@@ -1,0 +1,29 @@
+[
+	{
+		"image": "https://m.media-amazon.com/images/I/71goZuIha-L._AC_UY327_FMwebp_QL65_.jpg",
+		"name": "Samsung Galaxy S23 Ultra 5G",
+		"description": "12GB RAM 256 Storage 200MP Wow-worthy resolution - Resolution on the Wide-angle Camera has nearly doubled, delivering strikingly clear photos. Zoom and crop your shots",
+		"category": "SmartPhones",
+		"subcategory": "",
+		"price": "72,999",
+		"brand": "Samsung"
+	},
+	{
+		"image": "https://m.media-amazon.com/images/I/71CXhVhpM0L._AC_UY327_FMwebp_QL65_.jpg",
+		"name": "Samsung Galaxy S24 Ultra",
+		"description": "12GB RAM Android 14 Snapdragon,Fast Charging Support, Dual SIM, Always On Display, Built-In GPS, Mobile Hotspot Capability",
+		"category": "SmartPhones",
+		"subcategory": "",
+		"price": "96,470",
+		"brand": "Samsung"
+	},
+	{
+		"image": "https://m.media-amazon.com/images/I/81vqHyDCSCL._AC_UY327_FMwebp_QL65_.jpg",
+		"name": "Samsung Galaxy S21 FE 5G ",
+		"description": "12MP F1.8 Main Camera + 12MP UltraWide Camera  + 8MP Telephoto 32 MP F2.2 Front Camera,4500 mAh battery with Super Fast Charging & Fast Wireless Charging. ",
+		"category": "SmartPhones",
+		"subcategory": "",
+		"price": "31,999",
+		"brand": "Samsung"
+	}
+]

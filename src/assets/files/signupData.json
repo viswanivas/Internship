@@ -1,0 +1,18 @@
+[
+	{
+		"name": "viswa",
+		"email": "viswa@gmail.com",
+		"password": "viswa",
+		"repeatPassword": "viswa",
+		"role": "user",
+		"terms": true
+	},
+	{
+		"name": "vineesha",
+		"email": "vineesha@gmail.com",
+		"password": "vinni",
+		"repeatPassword": "vinni",
+		"role": "admin",
+		"terms": true
+	}
+]
